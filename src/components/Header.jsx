@@ -13,10 +13,10 @@ const Header = () => {
       <BiMenu size="2rem" style={{ zIndex: 3 }} onClick={handleMenu} />
       <nav className={showMenu ? 'menu-show' : 'menu-hide'}>
         <Link to="/">
-          <button onClick={handleMenu}>Home</button>
+          <button onClick={handleMenu} className='nav-btn'>Home</button>
         </Link>
         <Link to="/auth">
-          <button onClick={handleMenu}>Login</button>
+          <button onClick={handleMenu} className='nav-btn'>Login</button>
         </Link>
       </nav>
     </header>

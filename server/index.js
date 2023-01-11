@@ -3,7 +3,7 @@ const cors = require('cors')
 const db = require('./util/database')
 const {Car, Photo, User, Inquiry} = require('./util/models')
 const seed = require('./util/seed')
-const {getAllCars} = require('./controllers/car')
+const {getAllCars, getCar} = require('./controllers/car')
 
 const server = express()
 server.use(express.json())
@@ -21,6 +21,7 @@ Inquiry.belongsTo(Car)
 
 //endpoints
 server.get('/api/allCars', getAllCars)
+server.get('/api/car/:id', getCar)
 
 
 db

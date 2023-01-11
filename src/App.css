@@ -11,7 +11,7 @@ html {
 header {
   height: 4rem;
   width: 100vw;
-  background-color: gray;
+  background-color: #303030;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,17 +19,30 @@ header {
   padding: 0rem 2.5rem;
 }
 
+header h2 {
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 nav {
   position: absolute;
   height: 100vh;
   width: 300px;
-  background-color: aquamarine;
+  background-color: #303030;
   top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 70px;
   gap: 20px;
+}
+
+.nav-btn {
+  font-size: 24px;
+  background-color: transparent;
+  color: white;
+  border: none;
 }
 
 .menu-show {
@@ -104,4 +117,23 @@ nav {
   color: white;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+}
+
+.product-image {
+  width: 100vw;
+  height: 100vw;
+  object-fit: cover;
+}
+
+.product-details {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.description-container{
+  width: 90%;
 }
