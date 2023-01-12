@@ -4,6 +4,7 @@ const db = require('./util/database')
 const {Car, Photo, User, Inquiry} = require('./util/models')
 const seed = require('./util/seed')
 const {getAllCars, getCar} = require('./controllers/car')
+const {register, login} = require('./controllers/user')
 
 const server = express()
 server.use(express.json())
@@ -22,6 +23,8 @@ Inquiry.belongsTo(Car)
 //endpoints
 server.get('/api/allCars', getAllCars)
 server.get('/api/car/:id', getCar)
+server.post('/api/register', register)
+server.post('/api/login', login)
 
 
 db
