@@ -1,10 +1,12 @@
 import React, {useState, useRef} from 'react'
 import axios from 'axios'
+import {useSelector, useDispatch} from 'react-redux'
 
 const AuthScreen = () => {
   const [register, setRegister] = useState(false)
   const nameRef = useRef()
   const passRef = useRef()
+  const dispatch = useDispatch()
 
   const toggle = () => {setRegister(!register)}
 
@@ -17,6 +19,7 @@ const AuthScreen = () => {
 
     axios.post(register ? '/api/register' : '/api/login', body)
     .then(res => {
+      dispatch({type: 'LOGIN', payload: res.data})
       console.log(res.data)
     })
     .catch (err => {
