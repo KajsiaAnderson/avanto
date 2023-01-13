@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 
 let initialState = {
-    isAdmin: false,
+    admin: false,
     username: "",
     userId: null
 }
@@ -10,7 +10,7 @@ const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "LOGIN":
             let newState = {
-                isAdmin: action.payload.admin,
+                admin: action.payload.admin,
                 username: action.payload.username,
                 userId: action.payload.id
             }
