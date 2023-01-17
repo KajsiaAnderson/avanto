@@ -5,6 +5,7 @@ const {Car, Photo, User, Inquiry} = require('./util/models')
 const seed = require('./util/seed')
 const {getAllCars, getCar} = require('./controllers/car')
 const {register, login} = require('./controllers/user')
+const {createInquiry, getInquiries} = require('./controllers/inquiry')
 
 const server = express()
 server.use(express.json())
@@ -25,6 +26,8 @@ server.get('/api/allCars', getAllCars)
 server.get('/api/car/:id', getCar)
 server.post('/api/register', register)
 server.post('/api/login', login)
+server.post('/api/createInquiry', createInquiry)
+server.get('/api/getInquiries', getInquiries)
 
 
 db

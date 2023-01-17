@@ -150,3 +150,36 @@ nav {
   padding: 10px;
   border-radius: 10px;
 }
+
+.purchase-button-container {
+  background-color: #303030;
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.purchase-button-container button {
+  height: 35px;
+  width: 150px;
+  font-size: 22px;
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
+  border-radius: 3px;
+}
+
+.acc-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.acc-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
